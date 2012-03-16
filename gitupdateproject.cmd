@@ -1,0 +1,6 @@
+@echo Pull for root project...
+call git pull
+@echo Initialize possibly new ubmodules
+call git submodule update --init
+@echo Pull for submodules...
+call git submodule foreach git pull origin master

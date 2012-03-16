@@ -1,0 +1,1 @@
+git show -s --format=fuller > .adm_commitsignature

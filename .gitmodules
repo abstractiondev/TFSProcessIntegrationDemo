@@ -1,0 +1,9 @@
+[submodule "Abstractions/abscommon"]
+	path = Abstractions/abscommon
+	url = git://github.com/abstractiondev/abscommon
+[submodule "Abstractions/absconfig"]
+	path = Abstractions/absconfig
+	url = git://github.com/abstractiondev/absconfig
+[submodule "Abstractions/absbuilder"]
+	path = Abstractions/absbuilder
+	url = git://github.com/abstractiondev/absbuilder
