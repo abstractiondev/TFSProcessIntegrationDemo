@@ -7,3 +7,24 @@
 [submodule "Abstractions/absbuilder"]
 	path = Abstractions/absbuilder
 	url = git://github.com/abstractiondev/absbuilder
+[submodule "Abstractions/OperationABS"]
+	path = Abstractions/OperationABS
+	url = git://github.com/abstractiondev/OperationABS
+[submodule "Abstractions/StatusTrackingABS"]
+	path = Abstractions/StatusTrackingABS
+	url = git://github.com/abstractiondev/StatusTrackingABS
+[submodule "Abstractions/OperationToStatusTrackingTRANS"]
+	path = Abstractions/OperationToStatusTrackingTRANS
+	url = git://github.com/abstractiondev/OperationToStatusTrackingTRANS
+[submodule "Abstractions/DocumentationABS"]
+	path = Abstractions/DocumentationABS
+	url = git://github.com/abstractiondev/DocumentationABS
+[submodule "Abstractions/OperationToDocumentationTRANS"]
+	path = Abstractions/OperationToDocumentationTRANS
+	url = git://github.com/abstractiondev/OperationToDocumentationTRANS
+[submodule "Abstractions/ChangeRequestABS"]
+	path = Abstractions/ChangeRequestABS
+	url = git://github.com/abstractiondev/ChangeRequestABS
+[submodule "Abstractions/ChangeRequestToDocumentationTRANS"]
+	path = Abstractions/ChangeRequestToDocumentationTRANS
+	url = git://github.com/abstractiondev/ChangeRequestToDocumentationTRANS
