@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangeRequestToDocumentatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperationABS", "Abstractions\OperationABS\OperationABS.csproj", "{C7A918BA-41E4-43A2-94F1-AECF9F9334DB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apps", "Apps", "{F20FD02A-EE9D-429F-B7A4-32C551A9D378}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TFSProcessIntegrationDemoConsole", "Apps\TFSProcessIntegrationDemoConsole\TFSProcessIntegrationDemoConsole.csproj", "{E451DC11-E640-4B63-9CBF-00663F45C7E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -121,6 +125,16 @@ Global
 		{C7A918BA-41E4-43A2-94F1-AECF9F9334DB}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{C7A918BA-41E4-43A2-94F1-AECF9F9334DB}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{C7A918BA-41E4-43A2-94F1-AECF9F9334DB}.Release|x86.ActiveCfg = Release|Any CPU
+		{E451DC11-E640-4B63-9CBF-00663F45C7E0}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{E451DC11-E640-4B63-9CBF-00663F45C7E0}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{E451DC11-E640-4B63-9CBF-00663F45C7E0}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{E451DC11-E640-4B63-9CBF-00663F45C7E0}.Debug|x86.ActiveCfg = Debug|x86
+		{E451DC11-E640-4B63-9CBF-00663F45C7E0}.Debug|x86.Build.0 = Debug|x86
+		{E451DC11-E640-4B63-9CBF-00663F45C7E0}.Release|Any CPU.ActiveCfg = Release|x86
+		{E451DC11-E640-4B63-9CBF-00663F45C7E0}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{E451DC11-E640-4B63-9CBF-00663F45C7E0}.Release|Mixed Platforms.Build.0 = Release|x86
+		{E451DC11-E640-4B63-9CBF-00663F45C7E0}.Release|x86.ActiveCfg = Release|x86
+		{E451DC11-E640-4B63-9CBF-00663F45C7E0}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -135,5 +149,6 @@ Global
 		{17F6909F-3DF1-4FDC-8A1B-83DC4534A7DC} = {D0EF7B40-E356-470F-886A-5AB58C98950A}
 		{91A2FB35-854B-4FCB-9AF1-9FD02E850EE3} = {D0EF7B40-E356-470F-886A-5AB58C98950A}
 		{C7A918BA-41E4-43A2-94F1-AECF9F9334DB} = {D0EF7B40-E356-470F-886A-5AB58C98950A}
+		{E451DC11-E640-4B63-9CBF-00663F45C7E0} = {F20FD02A-EE9D-429F-B7A4-32C551A9D378}
 	EndGlobalSection
 EndGlobal

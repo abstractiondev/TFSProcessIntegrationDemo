@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TFSProcessIntegrationDemoConsole.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TFSCollectionUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://prosrv2:8080/tfs/private</Value>
+    </Setting>
+    <Setting Name="TFSProjectName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ADM Demo</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
