@@ -7,6 +7,14 @@
       </Abstraction>
     </Abstractions>
     <Transformations>
+      <Transformation name="OperationToStatusTracking"
+                      sourceAbstraction="Operation"
+                      targetAbstraction="StatusTracking"
+                      />
+      <Transformation name="OperationToDocumentation"
+                      sourceAbstraction="Operation"
+                      targetAbstraction="Documentation"
+                      />
       <Transformation name="StatusTrackingToDocumentation"
                       sourceAbstraction="StatusTracking"
                       targetAbstraction="Documentation"
@@ -17,6 +25,8 @@
                       />
     </Transformations>
     <BuildExecution>
+      <TransformationItem nameRef="OperationToStatusTracking" />
+      <TransformationItem nameRef="OperationToDocumentation" />
       <TransformationItem nameRef="StatusTrackingToDocumentation" />
       <TransformationItem nameRef="ChangeRequestToDocumentation" />
       <AbstractionItem nameRef="Documentation"/>

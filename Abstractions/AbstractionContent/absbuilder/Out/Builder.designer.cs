@@ -8,6 +8,14 @@ using System;
         {
 			CleanUp();
             Tuple<string, string>[] generatorFiles = null;
+				FetchTransformationSources("OperationToStatusTracking", "Operation");
+        generatorFiles = ExecuteAssemblyGenerator("OperationToStatusTracking", "TRANS", "Transformer");
+        WriteGeneratorFiles(generatorFiles, "OperationToStatusTracking", "TRANS");
+		PushTransformationTargets("OperationToStatusTracking", "StatusTracking");
+				FetchTransformationSources("OperationToDocumentation", "Operation");
+        generatorFiles = ExecuteAssemblyGenerator("OperationToDocumentation", "TRANS", "Transformer");
+        WriteGeneratorFiles(generatorFiles, "OperationToDocumentation", "TRANS");
+		PushTransformationTargets("OperationToDocumentation", "Documentation");
 				FetchTransformationSources("StatusTrackingToDocumentation", "StatusTracking");
         generatorFiles = ExecuteAssemblyGenerator("StatusTrackingToDocumentation", "TRANS", "Transformer");
         WriteGeneratorFiles(generatorFiles, "StatusTrackingToDocumentation", "TRANS");
@@ -22,7 +30,9 @@ using System;
 		
 		private void CleanUp()
 		{
-		            CleanUpTransformationInputAndOutput("StatusTrackingToDocumentation", "Documentation");
+		            CleanUpTransformationInputAndOutput("OperationToStatusTracking", "StatusTracking");
+				            CleanUpTransformationInputAndOutput("OperationToDocumentation", "Documentation");
+				            CleanUpTransformationInputAndOutput("StatusTrackingToDocumentation", "Documentation");
 				            CleanUpTransformationInputAndOutput("ChangeRequestToDocumentation", "Documentation");
 				            CleanUpAbstractionOutput("Documentation");
 						}

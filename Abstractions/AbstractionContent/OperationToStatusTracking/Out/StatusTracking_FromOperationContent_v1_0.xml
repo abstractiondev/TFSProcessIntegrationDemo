@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<StatusTrackingAbstraction xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/StatusTracking_v1_0.xsd">
+  <StatusItems>
+    <StatusItem name="SortNumbersEvensBeforeOdds_DataArray" displayName="VariableType: DataArray" description="Data array whose contents are sorted">
+      <StatusValue trafficLightIndicator="green" indicatorDisplayText="Implemented" indicatorValue="1" />
+    </StatusItem>
+    <StatusItem name="SortNumbersEvensBeforeOdds_AscendingOrder" displayName="VariableType: AscendingOrder" description="If true the array is sorted in ascending order, if false then descending. Evens before odds always regardless though.">
+      <StatusValue trafficLightIndicator="green" indicatorDisplayText="Implemented" indicatorValue="1" />
+    </StatusItem>
+    <StatusItem name="SortNumbersEvensBeforeOdds_DataArrayNotNull" displayName="ValidationType: DataArrayNotNull" description="Validate that DataArray is not null">
+      <StatusValue trafficLightIndicator="green" indicatorDisplayText="Implemented" indicatorValue="1" />
+    </StatusItem>
+    <StatusItem name="SortNumbersEvensBeforeOdds_SortNumbers" displayName="MethodExecuteType: SortNumbers" description="Sorts numbers in given array ascending or descending based on the parameter">
+      <StatusValue trafficLightIndicator="green" indicatorDisplayText="Implemented" indicatorValue="1" />
+    </StatusItem>
+    <StatusItem name="SortNumbersEvensBeforeOdds_SortEvensBeforeOdds" displayName="MethodExecuteType: SortEvensBeforeOdds" description="Sorts even numbers before odds, retaining the current order">
+      <StatusValue trafficLightIndicator="yellow" indicatorDisplayText="Being implemented" indicatorValue="1" />
+    </StatusItem>
+    <StatusItem name="SortNumbersEvensBeforeOdds_SortedArray" displayName="VariableType: SortedArray" description="Sorted result array">
+      <StatusValue trafficLightIndicator="yellow" indicatorDisplayText="Being implemented" indicatorValue="1" />
+    </StatusItem>
+  </StatusItems>
+  <Groups>
+    <Group name="SortNumbersEvensBeforeOdds" groupRole="Root">
+      <ItemRef itemName="SortNumbersEvensBeforeOdds_DataArray" />
+      <ItemRef itemName="SortNumbersEvensBeforeOdds_AscendingOrder" />
+      <ItemRef itemName="SortNumbersEvensBeforeOdds_DataArrayNotNull" />
+      <ItemRef itemName="SortNumbersEvensBeforeOdds_SortNumbers" />
+      <ItemRef itemName="SortNumbersEvensBeforeOdds_SortEvensBeforeOdds" />
+      <ItemRef itemName="SortNumbersEvensBeforeOdds_SortedArray" />
+    </Group>
+  </Groups>
+</StatusTrackingAbstraction>

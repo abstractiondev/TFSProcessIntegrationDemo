@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperationToStatusTrackingTR
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatusTrackingToDocumentationTRANS", "Abstractions\StatusTrackingToDocumentationTRANS\StatusTrackingToDocumentationTRANS.csproj", "{A2A6D400-B1BD-494A-9ACF-9E9CBF4A496F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatusTrackingABS", "Abstractions\StatusTrackingABS\StatusTrackingABS.csproj", "{6CF15F99-C6A9-44E9-96F0-CAD4564A8923}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -159,6 +161,16 @@ Global
 		{A2A6D400-B1BD-494A-9ACF-9E9CBF4A496F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{A2A6D400-B1BD-494A-9ACF-9E9CBF4A496F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{A2A6D400-B1BD-494A-9ACF-9E9CBF4A496F}.Release|x86.ActiveCfg = Release|Any CPU
+		{6CF15F99-C6A9-44E9-96F0-CAD4564A8923}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CF15F99-C6A9-44E9-96F0-CAD4564A8923}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CF15F99-C6A9-44E9-96F0-CAD4564A8923}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{6CF15F99-C6A9-44E9-96F0-CAD4564A8923}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{6CF15F99-C6A9-44E9-96F0-CAD4564A8923}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6CF15F99-C6A9-44E9-96F0-CAD4564A8923}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CF15F99-C6A9-44E9-96F0-CAD4564A8923}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CF15F99-C6A9-44E9-96F0-CAD4564A8923}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{6CF15F99-C6A9-44E9-96F0-CAD4564A8923}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{6CF15F99-C6A9-44E9-96F0-CAD4564A8923}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -175,6 +187,7 @@ Global
 		{C7A918BA-41E4-43A2-94F1-AECF9F9334DB} = {D0EF7B40-E356-470F-886A-5AB58C98950A}
 		{66BEB793-1056-4F10-AEE0-0DA6A54CB398} = {D0EF7B40-E356-470F-886A-5AB58C98950A}
 		{A2A6D400-B1BD-494A-9ACF-9E9CBF4A496F} = {D0EF7B40-E356-470F-886A-5AB58C98950A}
+		{6CF15F99-C6A9-44E9-96F0-CAD4564A8923} = {D0EF7B40-E356-470F-886A-5AB58C98950A}
 		{E451DC11-E640-4B63-9CBF-00663F45C7E0} = {F20FD02A-EE9D-429F-B7A4-32C551A9D378}
 	EndGlobalSection
 EndGlobal

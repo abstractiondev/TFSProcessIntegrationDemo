@@ -66,6 +66,10 @@
       <Project>{83808714-2E3E-4329-9A88-7C1AE3999B6C}</Project>
       <Name>ChangeRequestABS</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Abstractions\StatusTrackingABS\StatusTrackingABS.csproj">
+      <Project>{6CF15F99-C6A9-44E9-96F0-CAD4564A8923}</Project>
+      <Name>StatusTrackingABS</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
