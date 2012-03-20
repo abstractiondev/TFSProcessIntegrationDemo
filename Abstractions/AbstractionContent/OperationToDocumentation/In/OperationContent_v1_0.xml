@@ -19,6 +19,12 @@
         <Validation name="DataArrayNotNull" designDesc="Validate that DataArray is not null" state="implemented">
           <Target name="DataArray" />
         </Validation>
+        <!-- Example adding to not-implemented detail -->
+        <!--
+        <Validation name="DataArrayDoesNotContainNegativeNumbers" designDesc="Validate, that data array does not contain negative numbers" state="designApproved">
+          <Target name="DataArray"/>
+        </Validation>
+        -->
       </Parameters>
       <Execution>
         <SequentialExecution>

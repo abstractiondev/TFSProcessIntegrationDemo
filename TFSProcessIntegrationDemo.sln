@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatusTrackingToDocumentati
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatusTrackingABS", "Abstractions\StatusTrackingABS\StatusTrackingABS.csproj", "{6CF15F99-C6A9-44E9-96F0-CAD4564A8923}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoAppBeingBuilt", "Apps\DemoAppBeingBuilt\DemoAppBeingBuilt.csproj", "{DEF3FC64-EB22-45DC-B699-1CFB639741CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -171,6 +173,16 @@ Global
 		{6CF15F99-C6A9-44E9-96F0-CAD4564A8923}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{6CF15F99-C6A9-44E9-96F0-CAD4564A8923}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{6CF15F99-C6A9-44E9-96F0-CAD4564A8923}.Release|x86.ActiveCfg = Release|Any CPU
+		{DEF3FC64-EB22-45DC-B699-1CFB639741CA}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{DEF3FC64-EB22-45DC-B699-1CFB639741CA}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{DEF3FC64-EB22-45DC-B699-1CFB639741CA}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{DEF3FC64-EB22-45DC-B699-1CFB639741CA}.Debug|x86.ActiveCfg = Debug|x86
+		{DEF3FC64-EB22-45DC-B699-1CFB639741CA}.Debug|x86.Build.0 = Debug|x86
+		{DEF3FC64-EB22-45DC-B699-1CFB639741CA}.Release|Any CPU.ActiveCfg = Release|x86
+		{DEF3FC64-EB22-45DC-B699-1CFB639741CA}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{DEF3FC64-EB22-45DC-B699-1CFB639741CA}.Release|Mixed Platforms.Build.0 = Release|x86
+		{DEF3FC64-EB22-45DC-B699-1CFB639741CA}.Release|x86.ActiveCfg = Release|x86
+		{DEF3FC64-EB22-45DC-B699-1CFB639741CA}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -189,5 +201,6 @@ Global
 		{A2A6D400-B1BD-494A-9ACF-9E9CBF4A496F} = {D0EF7B40-E356-470F-886A-5AB58C98950A}
 		{6CF15F99-C6A9-44E9-96F0-CAD4564A8923} = {D0EF7B40-E356-470F-886A-5AB58C98950A}
 		{E451DC11-E640-4B63-9CBF-00663F45C7E0} = {F20FD02A-EE9D-429F-B7A4-32C551A9D378}
+		{DEF3FC64-EB22-45DC-B699-1CFB639741CA} = {F20FD02A-EE9D-429F-B7A4-32C551A9D378}
 	EndGlobalSection
 EndGlobal

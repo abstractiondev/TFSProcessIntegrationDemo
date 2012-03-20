@@ -26,6 +26,8 @@ using System;
 		PushTransformationTargets("ChangeRequestToDocumentation", "Documentation");
 			        generatorFiles = ExecuteAssemblyGenerator("Documentation", "ABS", "DesignDocumentation_v1_0");
 	        WriteGeneratorFiles(generatorFiles, "Documentation", "ABS");
+			        generatorFiles = ExecuteAssemblyGenerator("Operation", "ABS", "CSharpCode_v1_0");
+	        WriteGeneratorFiles(generatorFiles, "Operation", "ABS");
 		        }
 		
 		private void CleanUp()
@@ -35,6 +37,7 @@ using System;
 				            CleanUpTransformationInputAndOutput("StatusTrackingToDocumentation", "Documentation");
 				            CleanUpTransformationInputAndOutput("ChangeRequestToDocumentation", "Documentation");
 				            CleanUpAbstractionOutput("Documentation");
+				            CleanUpAbstractionOutput("Operation");
 						}
 	}
 }

@@ -2,18 +2,20 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{3A9EEC93-0E0B-4740-853F-ACD9397E3E46}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{DEF3FC64-EB22-45DC-B699-1CFB639741CA}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AbstractionContent</RootNamespace>
-    <AssemblyName>AbstractionContent</AssemblyName>
+    <RootNamespace>DemoAppBeingBuilt</RootNamespace>
+    <AssemblyName>DemoAppBeingBuilt</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,7 +24,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -40,31 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="absbuilder\Out\Builder.designer.cs" />
-    <None Include="Operation\Out\OperationContent_v1_0.designer.cs" />
+    <Compile Include="..\..\Abstractions\AbstractionContent\Operation\Out\OperationContent_v1_0.designer.cs">
+      <Link>ADM\OperationContent_v1_0.designer.cs</Link>
+    </Compile>
+    <Compile Include="Implementation\SortNumbersEvensBeforeOddsImplementation.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Content Include="ChangeRequest\In\DemoChangeRequestPackage1.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="ChangeRequest\In\DemoChangeRequest1.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Operation\In\OperationContent_v1_0.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="absbuilder\In\Content_v1_0\AbstractionBuilderContent_v1_0.xml">
-      <SubType>Designer</SubType>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Documentation\Out\Change request package for P1-2012.doc" />
-    <None Include="Documentation\Out\Operations.doc" />
-    <None Include="Documentation\Out\Status Tracking Document.doc" />
-    <None Include="Documentation\Out\Ungrouped change requests.doc" />
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
