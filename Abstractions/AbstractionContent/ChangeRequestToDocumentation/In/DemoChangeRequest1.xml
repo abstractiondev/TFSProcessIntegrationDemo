@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChangeRequestAbstraction xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../ChangeRequestABS/ChangeRequest/Content_v1_0/ChangeRequest_v1_0.xsd">
+	<ChangeRequests>
+		<ChangeRequest name="Critical Demo change request" priority="Critical">
+      <Description>This change is really critical!</Description>
+		</ChangeRequest>
+    <ChangeRequest name="Urgent Demo change request" priority="Urgent">
+      <Description>This change is relatively urgent!</Description>
+    </ChangeRequest>
+    <ChangeRequest name="Normal Demo change request" priority="Normal">
+      <Description>This change is normal</Description>
+    </ChangeRequest>
+    <ChangeRequest name="Low Demo change request" priority="Low">
+      <Description>This change is low priority</Description>
+    </ChangeRequest>
+    <ChangeRequest name="Undefined Demo change request" priority="Undefined">
+      <Description>This change priority is undefined</Description>
+    </ChangeRequest>
+	</ChangeRequests>
+</ChangeRequestAbstraction>

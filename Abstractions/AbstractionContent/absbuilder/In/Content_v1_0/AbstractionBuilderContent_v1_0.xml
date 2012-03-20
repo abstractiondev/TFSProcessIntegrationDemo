@@ -11,9 +11,14 @@
                       sourceAbstraction="StatusTracking"
                       targetAbstraction="Documentation"
                       />
+      <Transformation name="ChangeRequestToDocumentation"
+                      sourceAbstraction="ChangeRequest"
+                      targetAbstraction="Documentation"
+                      />
     </Transformations>
     <BuildExecution>
       <TransformationItem nameRef="StatusTrackingToDocumentation" />
+      <TransformationItem nameRef="ChangeRequestToDocumentation" />
       <AbstractionItem nameRef="Documentation"/>
     </BuildExecution>
   </Builder>

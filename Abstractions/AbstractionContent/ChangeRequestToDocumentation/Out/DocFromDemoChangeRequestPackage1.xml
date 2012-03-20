@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<DocumentationAbstraction xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/Operation_v1_0.xsd">
+  <Documentations>
+    <Documents>
+      <Document name="Change request package for P1-2012" title="Change request package for P1-2012">
+        <Content>
+          <Header text="Summary" level="1">
+            <Paragraph>
+              <Text styleRef="color:blue;font-weight:bold;font-style:italic">
+                <TextContent>Priority: Urgent</TextContent>
+              </Text>
+            </Paragraph>
+            <Paragraph>
+              <Text>
+                <TextContent>Due date: 20.3.2012</TextContent>
+              </Text>
+            </Paragraph>
+            <Paragraph>
+              <Text>
+                <TextContent>New Functionality: 1  Change to existing: 1  Total changes: 2</TextContent>
+              </Text>
+            </Paragraph>
+          </Header>
+          <Header text="Fix issue with submit data" level="1">
+            <Paragraph>
+              <Text styleRef="color:blue;font-weight:bold;font-style:italic">
+                <TextContent>Fix the submit data to work properly with binary types as well. (Full description should be written here).</TextContent>
+              </Text>
+            </Paragraph>
+          </Header>
+          <Header text="Add support for audio type data" level="1">
+            <Paragraph>
+              <Text styleRef="color:red;font-weight:bold;text-decoration:underline">
+                <TextContent>We need support for audio type data to record user specific feedback from microphone</TextContent>
+              </Text>
+            </Paragraph>
+          </Header>
+        </Content>
+      </Document>
+    </Documents>
+  </Documentations>
+</DocumentationAbstraction>

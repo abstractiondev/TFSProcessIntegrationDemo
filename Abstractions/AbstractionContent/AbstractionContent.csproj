@@ -42,6 +42,9 @@
   <ItemGroup>
     <Content Include="absbuilder\Out\Builder.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="ChangeRequest\In\DemoChangeRequestPackage1.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="ChangeRequest\In\DemoChangeRequest1.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -51,7 +54,10 @@
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Documentation\Out\Change request package for P1-2012.doc" />
+    <None Include="Documentation\Out\Ungrouped change requests.doc" />
+  </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>

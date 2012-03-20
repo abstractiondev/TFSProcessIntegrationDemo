@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChangeRequestAbstraction xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../ChangeRequestABS/ChangeRequest/Content_v1_0/ChangeRequest_v1_0.xsd">
+  <ChangeRequestPackage name="Change request package for P1-2012" dueDate="2012-03-20" priority="Urgent">
+    <PackagedChangeRequest changeType="ChangeToExistingFunctionality" name="Fix issue with submit data">
+      <Description>Fix the submit data to work properly with binary types as well. (Full description should be written here).</Description>
+    </PackagedChangeRequest>
+    <PackagedChangeRequest changeType="NewFunctionality" name="Add support for audio type data">
+      <Description>We need support for audio type data to record user specific feedback from microphone</Description>
+    </PackagedChangeRequest>
+  </ChangeRequestPackage>
+</ChangeRequestAbstraction>

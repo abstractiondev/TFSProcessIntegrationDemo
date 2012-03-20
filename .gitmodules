@@ -28,3 +28,6 @@
 [submodule "Abstractions/ChangeRequestToDocumentationTRANS"]
 	path = Abstractions/ChangeRequestToDocumentationTRANS
 	url = git://github.com/abstractiondev/ChangeRequestToDocumentationTRANS
+[submodule "Abstractions/StatusTrackingToDocumentationTRANS"]
+	path = Abstractions/StatusTrackingToDocumentationTRANS
+	url = git://github.com/abstractiondev/StatusTrackingToDocumentationTRANS

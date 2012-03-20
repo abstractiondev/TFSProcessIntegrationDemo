@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<DocumentationAbstraction xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/Operation_v1_0.xsd">
+  <Documentations>
+    <Documents>
+      <Document name="Ungrouped change requests" title="Ungrouped change requests">
+        <Content>
+          <Header text="Critical Demo change request" level="1">
+            <Paragraph>
+              <Text styleRef="color:red;font-weight:bold;text-decoration:underline">
+                <TextContent>This change is really critical!</TextContent>
+              </Text>
+            </Paragraph>
+          </Header>
+          <Header text="Urgent Demo change request" level="1">
+            <Paragraph>
+              <Text styleRef="color:blue;font-weight:bold;font-style:italic">
+                <TextContent>This change is relatively urgent!</TextContent>
+              </Text>
+            </Paragraph>
+          </Header>
+          <Header text="Normal Demo change request" level="1">
+            <Paragraph>
+              <Text>
+                <TextContent>This change is normal</TextContent>
+              </Text>
+            </Paragraph>
+          </Header>
+          <Header text="Low Demo change request" level="1">
+            <Paragraph>
+              <Text>
+                <TextContent>This change is low priority</TextContent>
+              </Text>
+            </Paragraph>
+          </Header>
+          <Header text="Undefined Demo change request" level="1">
+            <Paragraph>
+              <Text>
+                <TextContent>This change priority is undefined</TextContent>
+              </Text>
+            </Paragraph>
+          </Header>
+        </Content>
+      </Document>
+    </Documents>
+  </Documentations>
+</DocumentationAbstraction>
