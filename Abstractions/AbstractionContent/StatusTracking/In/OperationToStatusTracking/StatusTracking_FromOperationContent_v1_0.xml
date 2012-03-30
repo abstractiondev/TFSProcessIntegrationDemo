@@ -1,33 +1,25 @@
 <?xml version="1.0"?>
 <StatusTrackingAbstraction xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/StatusTracking_v1_0.xsd">
   <StatusItems>
-    <StatusItem name="SortNumbersEvensBeforeOdds_DataArray" displayName="VariableType: DataArray" description="Data array whose contents are sorted">
+    <StatusItem name="GetPlayingPosition_engine" displayName="VariableType: engine" description="The active engine instance">
       <StatusValue trafficLightIndicator="green" indicatorDisplayText="Implemented" indicatorValue="1" />
     </StatusItem>
-    <StatusItem name="SortNumbersEvensBeforeOdds_AscendingOrder" displayName="VariableType: AscendingOrder" description="If true the array is sorted in ascending order, if false then descending. Evens before odds always regardless though.">
+    <StatusItem name="GetPlayingPosition_EngineNotNull" displayName="ValidationType: EngineNotNull" description="Validate engine is not null">
       <StatusValue trafficLightIndicator="green" indicatorDisplayText="Implemented" indicatorValue="1" />
     </StatusItem>
-    <StatusItem name="SortNumbersEvensBeforeOdds_DataArrayNotNull" displayName="ValidationType: DataArrayNotNull" description="Validate that DataArray is not null">
+    <StatusItem name="GetPlayingPosition_GetPlayingPositionFromPlatform" displayName="MethodExecuteType: GetPlayingPositionFromPlatform" description="Get the low level playing position">
       <StatusValue trafficLightIndicator="green" indicatorDisplayText="Implemented" indicatorValue="1" />
     </StatusItem>
-    <StatusItem name="SortNumbersEvensBeforeOdds_SortNumbers" displayName="MethodExecuteType: SortNumbers" description="Sorts numbers in given array ascending or descending based on the parameter">
+    <StatusItem name="GetPlayingPosition_PlayingPosition" displayName="VariableType: PlayingPosition" description="Playing position result">
       <StatusValue trafficLightIndicator="green" indicatorDisplayText="Implemented" indicatorValue="1" />
-    </StatusItem>
-    <StatusItem name="SortNumbersEvensBeforeOdds_SortEvensBeforeOdds" displayName="MethodExecuteType: SortEvensBeforeOdds" description="Sorts even numbers before odds, retaining the current order">
-      <StatusValue trafficLightIndicator="yellow" indicatorDisplayText="Being implemented" indicatorValue="1" />
-    </StatusItem>
-    <StatusItem name="SortNumbersEvensBeforeOdds_SortedArray" displayName="VariableType: SortedArray" description="Sorted result array">
-      <StatusValue trafficLightIndicator="yellow" indicatorDisplayText="Being implemented" indicatorValue="1" />
     </StatusItem>
   </StatusItems>
   <Groups>
-    <Group name="SortNumbersEvensBeforeOdds" groupRole="Root">
-      <ItemRef itemName="SortNumbersEvensBeforeOdds_DataArray" />
-      <ItemRef itemName="SortNumbersEvensBeforeOdds_AscendingOrder" />
-      <ItemRef itemName="SortNumbersEvensBeforeOdds_DataArrayNotNull" />
-      <ItemRef itemName="SortNumbersEvensBeforeOdds_SortNumbers" />
-      <ItemRef itemName="SortNumbersEvensBeforeOdds_SortEvensBeforeOdds" />
-      <ItemRef itemName="SortNumbersEvensBeforeOdds_SortedArray" />
+    <Group name="GetPlayingPosition">
+      <ItemRef itemName="GetPlayingPosition_engine" />
+      <ItemRef itemName="GetPlayingPosition_EngineNotNull" />
+      <ItemRef itemName="GetPlayingPosition_GetPlayingPositionFromPlatform" />
+      <ItemRef itemName="GetPlayingPosition_PlayingPosition" />
     </Group>
   </Groups>
 </StatusTrackingAbstraction>

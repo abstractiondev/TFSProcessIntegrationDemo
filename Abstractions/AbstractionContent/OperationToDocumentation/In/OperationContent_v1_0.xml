@@ -1,47 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OperationAbstraction xmlns="http://tempuri.org/Operation_v1_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://tempuri.org/Operation_v1_0.xsd ../../../OperationABS/Operation/Content_v1_0/Operation_v1_0.xsd">
 	<Operations codeNamespace="Demo.Operations">
-    <Operation name="SortNumbersEvensBeforeOdds" isRootOperation="true">
+    <!-- Example "boxing" for audio engine - HOW -->
+    <Operation name="GetPlayingPosition">
       <OperationSpec>
-        <!--
-        <Requirements>
-          <Requirement category="Performance" name="MaximumTimeAllowed">
-            <Performance maxTotalTimeMs="1000"/>
-          </Requirement>
-        </Requirements>
-        -->
-        <Description>Sorts array of integers ascending or descending based on the parameter. Even numbers are preferred before odds. 
-        Spec sounds funny, but it should be on the same sanity level as an average software specification. So let's at least do it right :-)</Description>
+        <Description>
+          Get engine playing position.
+        </Description>
       </OperationSpec>
       <Parameters>
-        <Parameter name="DataArray" dataType="int[]" designDesc="Data array whose contents are sorted" state="implemented" />
-        <Parameter name="AscendingOrder" dataType="bool" designDesc="If true the array is sorted in ascending order, if false then descending. Evens before odds always regardless though." state="implemented"/>
-        <Validation name="DataArrayNotNull" designDesc="Validate that DataArray is not null" state="implemented">
-          <Target name="DataArray" />
+        <Parameter dataType="Engine" designDesc="The active engine instance" name="engine" state="implemented"/>
+        <Validation designDesc="Validate engine is not null" name="EngineNotNull" state="implemented">
+          <Target name="engine"/>
         </Validation>
-        <!-- Example adding to not-implemented detail -->
-        <!--
-        <Validation name="DataArrayDoesNotContainNegativeNumbers" designDesc="Validate, that data array does not contain negative numbers" state="designApproved">
-          <Target name="DataArray"/>
-        </Validation>
-        -->
       </Parameters>
       <Execution>
         <SequentialExecution>
-          <MethodExecute name="SortNumbers" designDesc="Sorts numbers in given array ascending or descending based on the parameter" state="implemented">
-            <Parameter name="DataArray"/>
-            <Parameter name="AscendingOrder"/>
-            <ReturnValue name="SortedNumbers" dataType="int[]" designDesc="Sorted number based on given criteria" state="implemented"/>
-          </MethodExecute>
-          <MethodExecute name="SortEvensBeforeOdds" designDesc="Sorts even numbers before odds, retaining the current order" state="designApproved">
-            <Target name="SortNumbersOutput"/>
-            <ReturnValue name="FullySorted" dataType="int[]" designDesc="Fully sorted value" state="designApproved"/>
+          <MethodExecute designDesc="Get the low level playing position" name="GetPlayingPositionFromPlatform" state="implemented">
+            <Parameter name="engine"/>
+            <ReturnValue dataType="int" designDesc="Actual playing position" name="PlayingPosition" state="implemented"/>
           </MethodExecute>
         </SequentialExecution>
       </Execution>
       <OperationReturnValues>
-        <ReturnValue name="SortedArray" dataType="int[]" designDesc="Sorted result array" state="designApproved" />
-        <Target name="SortEvensBeforeOddsOutput"/>
+        <ReturnValue dataType="int" designDesc="Playing position result" name="PlayingPosition" state="implemented"/>
       </OperationReturnValues>
     </Operation>
   </Operations>

@@ -2,29 +2,27 @@
 using System;
 
 		namespace Demo.Operations { 
-				public class SortNumbersEvensBeforeOddsParameters 
+				public class GetPlayingPositionParameters 
 		{
-				public int[] DataArray ;
-				public bool AscendingOrder ;
+				public Engine engine ;
 				}
 		
-		public class SortNumbersEvensBeforeOdds 
+		public class GetPlayingPosition 
 		{
-				private static void PrepareParameters(SortNumbersEvensBeforeOddsParameters parameters)
+				private static void PrepareParameters(GetPlayingPositionParameters parameters)
 		{
-					SortNumbersEvensBeforeOddsImplementation.ParameterValidation_DataArrayNotNull_ThrowsException(parameters.DataArray);
+					GetPlayingPositionImplementation.ParameterValidation_EngineNotNull_ThrowsException(parameters.engine);
 				}
-				public static SortNumbersEvensBeforeOddsReturnValue Execute(SortNumbersEvensBeforeOddsParameters parameters)
+				public static GetPlayingPositionReturnValue Execute(GetPlayingPositionParameters parameters)
 		{
 						PrepareParameters(parameters);
-					int[] SortNumbersOutput = SortNumbersEvensBeforeOddsImplementation.ExecuteMethod_SortNumbers(parameters.DataArray, parameters.AscendingOrder);		
-				int[] SortEvensBeforeOddsOutput = SortNumbersEvensBeforeOddsImplementation.ExecuteMethod_SortEvensBeforeOdds(SortNumbersOutput);		
-				SortNumbersEvensBeforeOddsReturnValue returnValue = SortNumbersEvensBeforeOddsImplementation.Get_ReturnValue(SortEvensBeforeOddsOutput);
+					int GetPlayingPositionFromPlatformOutput = GetPlayingPositionImplementation.ExecuteMethod_GetPlayingPositionFromPlatform(parameters.engine);		
+				GetPlayingPositionReturnValue returnValue = GetPlayingPositionImplementation.Get_ReturnValue();
 		return returnValue;
 				}
 				}
-				public class SortNumbersEvensBeforeOddsReturnValue 
+				public class GetPlayingPositionReturnValue 
 		{
-				public int[] SortedArray ;
+				public int PlayingPosition ;
 				}
 		 } 

@@ -17,7 +17,7 @@
             </Paragraph>
             <Paragraph>
               <Text>
-                <TextContent>New Functionality: 1  Change to existing: 1  Total changes: 2</TextContent>
+                <TextContent>New Functionality: 2  Change to existing: 2  Total changes: 4</TextContent>
               </Text>
             </Paragraph>
           </Header>
@@ -32,6 +32,20 @@
             <Paragraph>
               <Text styleRef="color:red;font-weight:bold;text-decoration:underline">
                 <TextContent>We need support for audio type data to record user specific feedback from microphone</TextContent>
+              </Text>
+            </Paragraph>
+          </Header>
+          <Header text="New neutral one" level="1">
+            <Paragraph>
+              <Text styleRef="color:blue;font-weight:bold;font-style:italic">
+                <TextContent>New feature</TextContent>
+              </Text>
+            </Paragraph>
+          </Header>
+          <Header text="New demonstrational name" level="1">
+            <Paragraph>
+              <Text styleRef="color:red;font-weight:bold;text-decoration:underline">
+                <TextContent>Free form description field</TextContent>
               </Text>
             </Paragraph>
           </Header>

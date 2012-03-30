@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Xml.Serialization;
 using ChangeRequest_v1_0;
 using Microsoft.TeamFoundation.Client;
@@ -21,15 +22,10 @@ namespace TFSProcessIntegrationDemoConsole
             {
                 var workItemStore = projectCollection.GetService<WorkItemStore>();
                 Project activeProject = workItemStore.Projects[projectName];
-                activeProject.ClearADMUserStories(workItemStore);
-                activeProject.ClearADMTasks(workItemStore);
-            }
-            using (var projectCollection = TfsTeamProjectCollectionFactory.GetTeamProjectCollection(collectionUri))
-            {
-                var workItemStore = projectCollection.GetService<WorkItemStore>();
-                Project activeProject = workItemStore.Projects[projectName];
-                activeProject.AddADMUserStories(workItemStore);
-                activeProject.AddADMTasks(workItemStore);
+                activeProject.ClearMissingADMUserStories(workItemStore);
+                activeProject.ClearMissingADMTasks(workItemStore);
+                activeProject.AddNewADMUserStories(workItemStore);
+                activeProject.AddNewADMTasks(workItemStore);
             }
         }
 
@@ -46,7 +42,7 @@ namespace TFSProcessIntegrationDemoConsole
 
     public static class Extensions
     {
-        public static void AddADMTasks(this Project activeProject, WorkItemStore workItemStore)
+        public static void AddNewADMTasks(this Project activeProject, WorkItemStore workItemStore)
         {
             DirectoryInfo dir = new DirectoryInfo(System.Environment.CurrentDirectory);
             dir = dir.Parent.Parent.Parent.Parent;
@@ -57,12 +53,15 @@ namespace TFSProcessIntegrationDemoConsole
                 StatusTrackingAbstractionType statusAbs = LoadXml<StatusTrackingAbstractionType>(fInfo.FullName);
                 foreach(GroupType group in statusAbs.Groups)
                 {
-                    WorkItem parentTask = CreateTask(activeProject, workItemStore);
-                    parentTask.Title = GetADMPrefixedString(group.name);
                     var groupItems =
                         statusAbs.StatusItems.Where(
                             statusItem => group.ItemRef.Count(itemRef => itemRef.itemName == statusItem.name) > 0).
                             ToArray();
+                    if (groupItems.Count(statusItem => statusItem.StatusValue.trafficLightIndicator !=
+                        StatusValueTypeTrafficLightIndicator.green) == 0)
+                        continue;
+                    WorkItem parentTask = CreateTask(activeProject, workItemStore);
+                    parentTask.Title = GetADMPrefixedString(group.name);
                     foreach(var statusItem in groupItems)
                     {
                         if (statusItem.StatusValue.trafficLightIndicator == StatusValueTypeTrafficLightIndicator.green)
@@ -90,7 +89,7 @@ namespace TFSProcessIntegrationDemoConsole
             remaining.Value = indicatorValue;
         }
 
-        public static void AddADMUserStories(this Project activeProject, WorkItemStore workItemStore)
+        public static void AddNewADMUserStories(this Project activeProject, WorkItemStore workItemStore)
         {
             DirectoryInfo dir = new DirectoryInfo(System.Environment.CurrentDirectory);
             dir = dir.Parent.Parent.Parent.Parent;
@@ -140,9 +139,10 @@ namespace TFSProcessIntegrationDemoConsole
             return workItem;
         }
 
-        public static void ClearADMUserStories(this Project activeProject, WorkItemStore workItemStore)
+        public static void ClearMissingADMUserStories(this Project activeProject, WorkItemStore workItemStore)
         {
-            const string wiqlQuery = "Select * from WorkItems where (State = 'Active') and [Work Item Type] = 'User Story'";
+            //const string wiqlQuery = "Select * from WorkItems where (State = 'Active' or State = 'New') and [Work Item Type] = 'User Story'";
+            const string wiqlQuery = "Select * from WorkItems where [Work Item Type] = 'User Story'";
             var workItems = workItemStore.Query(wiqlQuery);
             List<int> destroyWorkItemIDs = new List<int>();
             foreach(WorkItem workItem in workItems)
@@ -157,9 +157,10 @@ namespace TFSProcessIntegrationDemoConsole
             int errCount = result.Count();
         }
 
-        public static void ClearADMTasks(this Project activeProject, WorkItemStore workItemStore)
+        public static void ClearMissingADMTasks(this Project activeProject, WorkItemStore workItemStore)
         {
-            const string wiqlQuery = "Select * from WorkItems where (State = 'Active') and [Work Item Type] = 'Task'";
+            //const string wiqlQuery = "Select * from WorkItems where (State = 'Active' or State = 'New') and [Work Item Type] = 'Task'";
+            const string wiqlQuery = "Select * from WorkItems where [Work Item Type] = 'Task'";
             var workItems = workItemStore.Query(wiqlQuery);
             List<int> destroyWorkItemIDs = new List<int>();
             foreach (WorkItem workItem in workItems)
@@ -177,7 +178,8 @@ namespace TFSProcessIntegrationDemoConsole
 
         public static WorkItem[] GetActiveADMIssues(this Project activeProject, WorkItemStore workItemStore)
         {
-            const string wiqlQuery = "Select ID, Title from Issue where (State = 'Active') order by Title";
+            //const string wiqlQuery = "Select ID, Title from Issue where (State = 'Active' or State = 'New') order by Title";
+            const string wiqlQuery = "Select ID, Title from Issue where order by Title";
             var workItems = workItemStore.Query(wiqlQuery);
             List<WorkItem> result = new List<WorkItem>();
             foreach(WorkItem workItem in workItems)

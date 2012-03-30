@@ -4,12 +4,13 @@
     <Documents>
       <Document name="Operations" title="Operations">
         <Content>
-          <Header text="(R) SortNumbersEvensBeforeOdds (DataArray, AscendingOrder)" level="1">
+          <Header text="GetPlayingPosition (engine)" level="1">
             <Header text="Specifications" level="2">
               <Paragraph>
                 <Text>
-                  <TextContent>Sorts array of integers ascending or descending based on the parameter. Even numbers are preferred before odds. 
-        Spec sounds funny, but it should be on the same sanity level as an average software specification. So let's at least do it right :-)</TextContent>
+                  <TextContent>
+          Get engine playing position.
+        </TextContent>
                 </Text>
               </Paragraph>
             </Header>
@@ -24,41 +25,30 @@
                   <Rows>
                     <Row>
                       <ColumnData>
-                        <TextContent>DataArray</TextContent>
+                        <TextContent>engine</TextContent>
                       </ColumnData>
                       <ColumnData>
-                        <TextContent>int[]</TextContent>
+                        <TextContent>Engine</TextContent>
                       </ColumnData>
                       <ColumnData>
-                        <TextContent>Data array whose contents are sorted</TextContent>
-                      </ColumnData>
-                    </Row>
-                    <Row>
-                      <ColumnData>
-                        <TextContent>AscendingOrder</TextContent>
-                      </ColumnData>
-                      <ColumnData>
-                        <TextContent>bool</TextContent>
-                      </ColumnData>
-                      <ColumnData>
-                        <TextContent>If true the array is sorted in ascending order, if false then descending. Evens before odds always regardless though.</TextContent>
+                        <TextContent>The active engine instance</TextContent>
                       </ColumnData>
                     </Row>
                   </Rows>
                 </Table>
               </Paragraph>
             </Header>
-            <Header text="Validation: DataArrayNotNull ( DataArray )" level="2">
+            <Header text="Validation: EngineNotNull ( engine )" level="2">
               <Paragraph>
                 <Text>
-                  <TextContent>Validate that DataArray is not null</TextContent>
+                  <TextContent>Validate engine is not null</TextContent>
                 </Text>
               </Paragraph>
             </Header>
-            <Header text="Execution: SortNumbers ( DataArray, AscendingOrder )" level="2">
+            <Header text="Execution: GetPlayingPositionFromPlatform ( engine )" level="2">
               <Paragraph>
                 <Text>
-                  <TextContent>Sorts numbers in given array ascending or descending based on the parameter</TextContent>
+                  <TextContent>Get the low level playing position</TextContent>
                 </Text>
               </Paragraph>
               <Paragraph>
@@ -71,49 +61,20 @@
                   <Rows>
                     <Row>
                       <ColumnData>
-                        <TextContent>SortedNumbers</TextContent>
+                        <TextContent>PlayingPosition</TextContent>
                       </ColumnData>
                       <ColumnData>
-                        <TextContent>int[]</TextContent>
+                        <TextContent>int</TextContent>
                       </ColumnData>
                       <ColumnData>
-                        <TextContent>Sorted number based on given criteria</TextContent>
+                        <TextContent>Actual playing position</TextContent>
                       </ColumnData>
                     </Row>
                   </Rows>
                 </Table>
               </Paragraph>
             </Header>
-            <Header text="Execution: SortEvensBeforeOdds ( SortNumbersOutput )" level="2">
-              <Paragraph>
-                <Text styleRef="color:blue;font-weight:bold;font-style:italic">
-                  <TextContent>Sorts even numbers before odds, retaining the current order</TextContent>
-                </Text>
-              </Paragraph>
-              <Paragraph>
-                <Table>
-                  <Columns>
-                    <Column name="Output value field" />
-                    <Column name="DataType" />
-                    <Column name="Description" />
-                  </Columns>
-                  <Rows>
-                    <Row>
-                      <ColumnData styleRef="color:blue;font-weight:bold;font-style:italic">
-                        <TextContent>FullySorted</TextContent>
-                      </ColumnData>
-                      <ColumnData styleRef="color:blue;font-weight:bold;font-style:italic">
-                        <TextContent>int[]</TextContent>
-                      </ColumnData>
-                      <ColumnData styleRef="color:blue;font-weight:bold;font-style:italic">
-                        <TextContent>Fully sorted value</TextContent>
-                      </ColumnData>
-                    </Row>
-                  </Rows>
-                </Table>
-              </Paragraph>
-            </Header>
-            <Header text="Return Value : SortNumbersEvensBeforeOddsReturnValue ( SortEvensBeforeOddsOutput )" level="2">
+            <Header text="Return Value : GetPlayingPositionReturnValue" level="2">
               <Paragraph>
                 <Table>
                   <Columns>
@@ -123,14 +84,14 @@
                   </Columns>
                   <Rows>
                     <Row>
-                      <ColumnData styleRef="color:blue;font-weight:bold;font-style:italic">
-                        <TextContent>SortedArray</TextContent>
+                      <ColumnData>
+                        <TextContent>PlayingPosition</TextContent>
                       </ColumnData>
-                      <ColumnData styleRef="color:blue;font-weight:bold;font-style:italic">
-                        <TextContent>int[]</TextContent>
+                      <ColumnData>
+                        <TextContent>int</TextContent>
                       </ColumnData>
-                      <ColumnData styleRef="color:blue;font-weight:bold;font-style:italic">
-                        <TextContent>Sorted result array</TextContent>
+                      <ColumnData>
+                        <TextContent>Playing position result</TextContent>
                       </ColumnData>
                     </Row>
                   </Rows>

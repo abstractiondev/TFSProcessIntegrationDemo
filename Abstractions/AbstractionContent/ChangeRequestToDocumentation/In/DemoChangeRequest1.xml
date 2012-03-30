@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ChangeRequestAbstraction xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../ChangeRequestABS/ChangeRequest/Content_v1_0/ChangeRequest_v1_0.xsd">
+<?xml version="1.0" encoding="utf-8"?><?mso-infoPathSolution PIVersion="1.0.0.0" name="urn:schemas-microsoft-com:office:infopath:ChangeRequest2007:" href="file:///C:\LocalInfoPathPub\ChangeRequest2007.xsn" solutionVersion="1.0.0.2" language="fi" productVersion="14.0.0" ?><?mso-application progid="InfoPath.Document" versionProgid="InfoPath.Document.2"?><ChangeRequestAbstraction xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../ChangeRequestABS/ChangeRequest/Content_v1_0/ChangeRequest_v1_0.xsd">
 	<ChangeRequests>
 		<ChangeRequest name="Critical Demo change request" priority="Critical">
       <Description>This change is really critical!</Description>
@@ -16,5 +15,7 @@
     <ChangeRequest name="Undefined Demo change request" priority="Undefined">
       <Description>This change priority is undefined</Description>
     </ChangeRequest>
-	</ChangeRequests>
+	<ChangeRequest name="Neutral demonstration change" priority="Urgent" changeType="NewFunctionality" dueDate="2012-03-30">
+									<Description>Any new idea to the product</Description>
+								</ChangeRequest></ChangeRequests>
 </ChangeRequestAbstraction>

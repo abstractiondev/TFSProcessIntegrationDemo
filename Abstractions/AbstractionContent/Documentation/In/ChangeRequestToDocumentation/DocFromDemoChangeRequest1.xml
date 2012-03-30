@@ -39,6 +39,13 @@
               </Text>
             </Paragraph>
           </Header>
+          <Header text="Neutral demonstration change" level="1">
+            <Paragraph>
+              <Text styleRef="color:blue;font-weight:bold;font-style:italic">
+                <TextContent>Any new idea to the product</TextContent>
+              </Text>
+            </Paragraph>
+          </Header>
         </Content>
       </Document>
     </Documents>

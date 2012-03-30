@@ -236,7 +236,7 @@ div.WordSection1
 		Due date: 20.3.2012
 		</div>
 		</p><p>		<div class="MsoNormal" >
-		New Functionality: 1  Change to existing: 1  Total changes: 2
+		New Functionality: 2  Change to existing: 2  Total changes: 4
 		</div>
 		</p><h1>Fix issue with submit data</h1>
 		<p>		<div class="MsoNormal" style="color:blue;font-weight:bold;font-style:italic" >
@@ -245,6 +245,14 @@ div.WordSection1
 		</p><h1>Add support for audio type data</h1>
 		<p>		<div class="MsoNormal" style="color:red;font-weight:bold;text-decoration:underline" >
 		We need support for audio type data to record user specific feedback from microphone
+		</div>
+		</p><h1>New neutral one</h1>
+		<p>		<div class="MsoNormal" style="color:blue;font-weight:bold;font-style:italic" >
+		New feature
+		</div>
+		</p><h1>New demonstrational name</h1>
+		<p>		<div class="MsoNormal" style="color:red;font-weight:bold;text-decoration:underline" >
+		Free form description field
 		</div>
 		</p></div>
 

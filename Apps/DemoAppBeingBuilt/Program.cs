@@ -10,12 +10,9 @@ namespace DemoAppBeingBuilt
     {
         static void Main(string[] args)
         {
-            var parameters = new SortNumbersEvensBeforeOddsParameters();
-            parameters.DataArray = new int[] {4, 7, 8, 12, 55, 23};
-            parameters.AscendingOrder = true;
-            var result = SortNumbersEvensBeforeOdds.Execute(parameters);
-            var sortedArray = result.SortedArray;
-            print10First(sortedArray);
+            var parameters = new GetPlayingPositionParameters();
+            parameters.engine = null;
+            GetPlayingPosition.Execute(parameters);
             Console.WriteLine("Press enter to continue...");
             Console.ReadLine();
         }
