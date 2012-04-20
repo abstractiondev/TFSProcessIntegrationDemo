@@ -40,7 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="absbuilder\Out\Builder.designer.cs" />
     <None Include="Operation\Out\OperationContent_v1_0.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="ChangeRequest\In\DemoChangeRequestPackage1.xml">

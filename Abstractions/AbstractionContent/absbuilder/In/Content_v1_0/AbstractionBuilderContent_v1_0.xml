@@ -2,38 +2,38 @@
 <AbstractionBuilder xmlns="http://tempuri.org/absbuilder_v1_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://tempuri.org/absbuilder_v1_0.xsd ../../../../absbuilder/AbstractionBuilder/absbuilder/Content_v1_0/absbuilder_v1_0.xsd">
   <Builder>
     <Abstractions>
-      <Abstraction name="Operation">
+      <Abstraction name="OperationABS">
         <Generator name="CSharpCode_v1_0"/>        
       </Abstraction>
-      <Abstraction name="Documentation">
+      <Abstraction name="DocumentationABS">
         <Generator name="DesignDocumentation_v1_0"/>
       </Abstraction>
     </Abstractions>
     <Transformations>
-      <Transformation name="OperationToStatusTracking"
+      <Transformation name="OperationToStatusTrackingTRANS"
                       sourceAbstraction="Operation"
                       targetAbstraction="StatusTracking"
                       />
-      <Transformation name="OperationToDocumentation"
+      <Transformation name="OperationToDocumentationTRANS"
                       sourceAbstraction="Operation"
                       targetAbstraction="Documentation"
                       />
-      <Transformation name="StatusTrackingToDocumentation"
+      <Transformation name="StatusTrackingToDocumentationTRANS"
                       sourceAbstraction="StatusTracking"
                       targetAbstraction="Documentation"
                       />
-      <Transformation name="ChangeRequestToDocumentation"
+      <Transformation name="ChangeRequestToDocumentationTRANS"
                       sourceAbstraction="ChangeRequest"
                       targetAbstraction="Documentation"
                       />
     </Transformations>
     <BuildExecution>
-      <TransformationItem nameRef="OperationToStatusTracking" />
-      <TransformationItem nameRef="OperationToDocumentation" />
-      <TransformationItem nameRef="StatusTrackingToDocumentation" />
-      <TransformationItem nameRef="ChangeRequestToDocumentation" />
-      <AbstractionItem nameRef="Documentation"/>
-      <AbstractionItem nameRef="Operation"/>
+      <TransformationItem nameRef="OperationToStatusTrackingTRANS" />
+      <TransformationItem nameRef="OperationToDocumentationTRANS" />
+      <TransformationItem nameRef="StatusTrackingToDocumentationTRANS" />
+      <TransformationItem nameRef="ChangeRequestToDocumentationTRANS" />
+      <AbstractionItem nameRef="DocumentationABS"/>
+      <AbstractionItem nameRef="OperationABS"/>
     </BuildExecution>
   </Builder>
 </AbstractionBuilder>
