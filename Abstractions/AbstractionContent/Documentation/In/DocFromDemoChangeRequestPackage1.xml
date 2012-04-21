@@ -2,22 +2,22 @@
 <DocumentationAbstraction xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/Operation_v1_0.xsd">
   <Documentations>
     <Documents>
-      <Document name="Change request package for P1-2012" title="Change request package for P1-2012">
+      <Document name="Change request 1" title="Change request 1">
         <Content>
           <Header text="Summary" level="1">
             <Paragraph>
-              <Text styleRef="color:blue;font-weight:bold;font-style:italic">
-                <TextContent>Priority: Urgent</TextContent>
+              <Text styleRef="color:red;font-weight:bold;text-decoration:underline">
+                <TextContent>Priority: Critical</TextContent>
               </Text>
             </Paragraph>
             <Paragraph>
               <Text>
-                <TextContent>Due date: 20.3.2012</TextContent>
+                <TextContent>Due date: 22.4.2012</TextContent>
               </Text>
             </Paragraph>
             <Paragraph>
               <Text>
-                <TextContent>New Functionality: 2  Change to existing: 2  Total changes: 4</TextContent>
+                <TextContent>New Functionality: 3  Change to existing: 2  Total changes: 5</TextContent>
               </Text>
             </Paragraph>
           </Header>
@@ -46,6 +46,13 @@
             <Paragraph>
               <Text styleRef="color:red;font-weight:bold;text-decoration:underline">
                 <TextContent>Free form description field</TextContent>
+              </Text>
+            </Paragraph>
+          </Header>
+          <Header text="Video Demo" level="1">
+            <Paragraph>
+              <Text styleRef="color:red;font-weight:bold;text-decoration:underline">
+                <TextContent>Example Description</TextContent>
               </Text>
             </Paragraph>
           </Header>

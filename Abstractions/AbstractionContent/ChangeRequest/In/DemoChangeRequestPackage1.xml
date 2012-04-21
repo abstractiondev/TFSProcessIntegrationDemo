@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><?mso-infoPathSolution PIVersion="1.0.0.0" name="urn:schemas-microsoft-com:office:infopath:ChangeRequest2007:" href="file:///C:\LocalInfoPathPub\ChangeRequest2007.xsn" solutionVersion="1.0.0.2" language="fi" productVersion="14.0.0" ?><?mso-application progid="InfoPath.Document" versionProgid="InfoPath.Document.2"?><ChangeRequestAbstraction xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../ChangeRequestABS/ChangeRequest/Content_v1_0/ChangeRequest_v1_0.xsd">
-  <ChangeRequestPackage name="Change request package for P1-2012" dueDate="2012-03-20" priority="Urgent">
+  <ChangeRequestPackage name="Change request 1" dueDate="2012-04-22" priority="Critical">
     <PackagedChangeRequest changeType="ChangeToExistingFunctionality" name="Fix issue with submit data">
       <Description>Fix the submit data to work properly with binary types as well. (Full description should be written here).</Description>
     </PackagedChangeRequest>
@@ -10,5 +10,7 @@
 									<Description>New feature</Description>
 								</PackagedChangeRequest><PackagedChangeRequest name="New demonstrational name" changeType="NewFunctionality">
 									<Description>Free form description field</Description>
+								</PackagedChangeRequest><PackagedChangeRequest name="Video Demo" changeType="NewFunctionality">
+									<Description>Example Description</Description>
 								</PackagedChangeRequest></ChangeRequestPackage>
 </ChangeRequestAbstraction>

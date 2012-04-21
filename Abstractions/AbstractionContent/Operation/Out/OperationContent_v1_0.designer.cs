@@ -2,27 +2,29 @@
 using System;
 
 		namespace Demo.Operations { 
-				public class GetPlayingPositionParameters 
+				public class SortNumbersEvensBeforeOddsParameters 
 		{
-				public Engine engine ;
+				public int[] DataArray ;
+				public bool AscendingOrder ;
 				}
 		
-		public class GetPlayingPosition 
+		public class SortNumbersEvensBeforeOdds 
 		{
-				private static void PrepareParameters(GetPlayingPositionParameters parameters)
+				private static void PrepareParameters(SortNumbersEvensBeforeOddsParameters parameters)
 		{
-					GetPlayingPositionImplementation.ParameterValidation_EngineNotNull_ThrowsException(parameters.engine);
+					SortNumbersEvensBeforeOddsImplementation.ParameterValidation_DataArrayNotNull_ThrowsException(parameters.DataArray);
 				}
-				public static GetPlayingPositionReturnValue Execute(GetPlayingPositionParameters parameters)
+				public static SortNumbersEvensBeforeOddsReturnValue Execute(SortNumbersEvensBeforeOddsParameters parameters)
 		{
 						PrepareParameters(parameters);
-					int GetPlayingPositionFromPlatformOutput = GetPlayingPositionImplementation.ExecuteMethod_GetPlayingPositionFromPlatform(parameters.engine);		
-				GetPlayingPositionReturnValue returnValue = GetPlayingPositionImplementation.Get_ReturnValue();
+					int[] SortNumbersOutput = SortNumbersEvensBeforeOddsImplementation.ExecuteMethod_SortNumbers(parameters.DataArray, parameters.AscendingOrder);		
+				int[] SortEvensBeforeOddsOutput = SortNumbersEvensBeforeOddsImplementation.ExecuteMethod_SortEvensBeforeOdds(SortNumbersOutput);		
+				SortNumbersEvensBeforeOddsReturnValue returnValue = SortNumbersEvensBeforeOddsImplementation.Get_ReturnValue(SortEvensBeforeOddsOutput);
 		return returnValue;
 				}
 				}
-				public class GetPlayingPositionReturnValue 
+				public class SortNumbersEvensBeforeOddsReturnValue 
 		{
-				public int PlayingPosition ;
+				public int[] SortedArray ;
 				}
 		 } 

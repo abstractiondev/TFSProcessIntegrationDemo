@@ -228,12 +228,11 @@ div.WordSection1
 		<div style='border:none;border-bottom:solid #4F81BD 1.0pt;padding:0cm 0cm 4.0pt 0cm'>
 <p class="MsoTitle">Operations</p>
 </div>
-		<h1>GetPlayingPosition (engine)</h1>
+		<h1>SortNumbersEvensBeforeOdds (DataArray, AscendingOrder)</h1>
 		<h2>Specifications</h2>
 		<p>		<div class="MsoNormal" >
-		
-          Get engine playing position.
-        
+		Sorts array of integers ascending or descending based on the parameter. Even numbers are preferred before odds. 
+        Spec sounds funny, but it should be on the same sanity level as an average software specification. So let's at least do it right :-)
 		</div>
 		</p><h2>Parameters</h2>
 		<p><table border="1">
@@ -241,66 +240,107 @@ div.WordSection1
 				<tr>
 				<td>
 				<div class="MsoNormal" >
-		engine
+		DataArray
 		</div>
 				</td>
 				<td>
 				<div class="MsoNormal" >
-		Engine
+		int[]
 		</div>
 				</td>
 				<td>
 				<div class="MsoNormal" >
-		The active engine instance
+		Data array whose contents are sorted
+		</div>
+				</td>
+				</tr>
+				<tr>
+				<td>
+				<div class="MsoNormal" >
+		AscendingOrder
+		</div>
+				</td>
+				<td>
+				<div class="MsoNormal" >
+		bool
+		</div>
+				</td>
+				<td>
+				<div class="MsoNormal" >
+		If true the array is sorted in ascending order, if false then descending. Evens before odds always regardless though.
 		</div>
 				</td>
 				</tr>
 		</table>
-		</p><h2>Validation: EngineNotNull ( engine )</h2>
+		</p><h2>Validation: DataArrayNotNull ( DataArray )</h2>
 		<p>		<div class="MsoNormal" >
-		Validate engine is not null
+		Validate that DataArray is not null
 		</div>
-		</p><h2>Execution: GetPlayingPositionFromPlatform ( engine )</h2>
+		</p><h2>Execution: SortNumbers ( DataArray, AscendingOrder )</h2>
 		<p>		<div class="MsoNormal" >
-		Get the low level playing position
+		Sorts numbers in given array ascending or descending based on the parameter
 		</div>
 		</p><p><table border="1">
 				<tr><th><div class=MsoNormal>Output value field</div></th><th><div class=MsoNormal>DataType</div></th><th><div class=MsoNormal>Description</div></th></tr>
 				<tr>
 				<td>
 				<div class="MsoNormal" >
-		PlayingPosition
+		SortedNumbers
 		</div>
 				</td>
 				<td>
 				<div class="MsoNormal" >
-		int
+		int[]
 		</div>
 				</td>
 				<td>
 				<div class="MsoNormal" >
-		Actual playing position
+		Sorted number based on given criteria
 		</div>
 				</td>
 				</tr>
 		</table>
-		</p><h2>Return Value : GetPlayingPositionReturnValue</h2>
+		</p><h2>Execution: SortEvensBeforeOdds ( SortNumbersOutput )</h2>
+		<p>		<div class="MsoNormal" >
+		Sorts even numbers before odds, retaining the current order
+		</div>
+		</p><p><table border="1">
+				<tr><th><div class=MsoNormal>Output value field</div></th><th><div class=MsoNormal>DataType</div></th><th><div class=MsoNormal>Description</div></th></tr>
+				<tr>
+				<td>
+				<div class="MsoNormal" >
+		FullySorted
+		</div>
+				</td>
+				<td>
+				<div class="MsoNormal" >
+		int[]
+		</div>
+				</td>
+				<td>
+				<div class="MsoNormal" >
+		Fully sorted value
+		</div>
+				</td>
+				</tr>
+		</table>
+		</p><h2>Return Value : SortNumbersEvensBeforeOddsReturnValue ( SortEvensBeforeOddsOutput )</h2>
 		<p><table border="1">
 				<tr><th><div class=MsoNormal>Return Value</div></th><th><div class=MsoNormal>DataType</div></th><th><div class=MsoNormal>Description</div></th></tr>
 				<tr>
 				<td>
 				<div class="MsoNormal" >
-		PlayingPosition
+		SortedArray
 		</div>
 				</td>
 				<td>
 				<div class="MsoNormal" >
-		int
+		int[]
 		</div>
 				</td>
 				<td>
 				<div class="MsoNormal" >
-		Playing position result
+		Sorted result array
 		</div>
 				</td>
 				</tr>

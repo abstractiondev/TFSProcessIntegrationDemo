@@ -226,17 +226,17 @@ div.WordSection1
 
 		
 		<div style='border:none;border-bottom:solid #4F81BD 1.0pt;padding:0cm 0cm 4.0pt 0cm'>
-<p class="MsoTitle">Change request package for P1-2012</p>
+<p class="MsoTitle">Change request 1</p>
 </div>
 		<h1>Summary</h1>
-		<p>		<div class="MsoNormal" style="color:blue;font-weight:bold;font-style:italic" >
-		Priority: Urgent
+		<p>		<div class="MsoNormal" style="color:red;font-weight:bold;text-decoration:underline" >
+		Priority: Critical
 		</div>
 		</p><p>		<div class="MsoNormal" >
-		Due date: 20.3.2012
+		Due date: 22.4.2012
 		</div>
 		</p><p>		<div class="MsoNormal" >
-		New Functionality: 2  Change to existing: 2  Total changes: 4
+		New Functionality: 3  Change to existing: 2  Total changes: 5
 		</div>
 		</p><h1>Fix issue with submit data</h1>
 		<p>		<div class="MsoNormal" style="color:blue;font-weight:bold;font-style:italic" >
@@ -253,6 +253,10 @@ div.WordSection1
 		</p><h1>New demonstrational name</h1>
 		<p>		<div class="MsoNormal" style="color:red;font-weight:bold;text-decoration:underline" >
 		Free form description field
+		</div>
+		</p><h1>Video Demo</h1>
+		<p>		<div class="MsoNormal" style="color:red;font-weight:bold;text-decoration:underline" >
+		Example Description
 		</div>
 		</p></div>
 

@@ -18,15 +18,26 @@ namespace TFSProcessIntegrationDemoConsole
         {
             Uri collectionUri = new Uri(Properties.Settings.Default.TFSCollectionUrl);
             string projectName = Properties.Settings.Default.TFSProjectName;
+            WriteInfo("Connecting to: " + collectionUri.AbsoluteUri.ToString());
             using(var projectCollection = TfsTeamProjectCollectionFactory.GetTeamProjectCollection(collectionUri))
             {
+                WriteInfo("Connecting to project: " + projectName);
                 var workItemStore = projectCollection.GetService<WorkItemStore>();
                 Project activeProject = workItemStore.Projects[projectName];
+                WriteInfo("Clearing existing ADM data on server...");
                 activeProject.ClearMissingADMUserStories(workItemStore);
                 activeProject.ClearMissingADMTasks(workItemStore);
+                WriteInfo("Adding current ADM data to server...");
                 activeProject.AddNewADMUserStories(workItemStore);
                 activeProject.AddNewADMTasks(workItemStore);
             }
+            WriteInfo("Done.");
+            Thread.Sleep(2000);
+        }
+
+        private static void WriteInfo(string infoLine)
+        {
+            Console.WriteLine(infoLine);
         }
 
         private static DateTime? GetIssueDueDate(WorkItem issue)
